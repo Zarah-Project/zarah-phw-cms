@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "person_groups",
+  "info": {
+    "singularName": "person-group",
+    "pluralName": "person-groups",
+    "displayName": "Person Group",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Group": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "People": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::person.person",
+      "mappedBy": "PersonGroup"
+    }
+  }
+}

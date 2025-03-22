@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "people",
+  "info": {
+    "singularName": "person",
+    "pluralName": "people",
+    "displayName": "Person",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "PersonGroup": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::person-group.person-group",
+      "inversedBy": "People"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "CardText": {
+      "type": "string",
+      "required": true
+    },
+    "Content": {
+      "type": "blocks"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Name"
+    },
+    "ActivismStories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::activism-story.activism-story",
+      "mappedBy": "People"
+    },
+    "Essays": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::essay.essay",
+      "mappedBy": "People"
+    },
+    "Networks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::network.network",
+      "mappedBy": "People"
+    }
+  }
+}

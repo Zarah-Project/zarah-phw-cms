@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activism_types",
+  "info": {
+    "singularName": "activism-type",
+    "pluralName": "activism-types",
+    "displayName": "Activism Type",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Type": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "ActivismStories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::activism-story.activism-story",
+      "mappedBy": "ActivismType"
+    }
+  }
+}

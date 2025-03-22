@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activism_stories",
+  "info": {
+    "singularName": "activism-story",
+    "pluralName": "activism-stories",
+    "displayName": "Activism Story",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "ActivismType": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::activism-type.activism-type",
+      "inversedBy": "ActivismStories"
+    },
+    "ShortDescription": {
+      "type": "string",
+      "required": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Content": {
+      "type": "blocks"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Title",
+      "required": true
+    },
+    "People": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::person.person",
+      "inversedBy": "ActivismStories"
+    },
+    "Networks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::network.network",
+      "inversedBy": "ActivismStories"
+    },
+    "Essays": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::essay.essay",
+      "inversedBy": "ActivismStories"
+    }
+  }
+}

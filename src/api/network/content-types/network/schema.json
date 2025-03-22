@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "networks",
+  "info": {
+    "singularName": "network",
+    "pluralName": "networks",
+    "displayName": "Network",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Place": {
+      "type": "string"
+    },
+    "StartDate": {
+      "type": "date",
+      "required": true
+    },
+    "EndDate": {
+      "type": "date"
+    },
+    "Latitude": {
+      "type": "float"
+    },
+    "Longitude": {
+      "type": "float"
+    },
+    "Content": {
+      "type": "blocks"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "ActivismStories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::activism-story.activism-story",
+      "mappedBy": "Networks"
+    },
+    "Essays": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::essay.essay",
+      "mappedBy": "Networks"
+    },
+    "People": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::person.person",
+      "inversedBy": "Networks"
+    }
+  }
+}
