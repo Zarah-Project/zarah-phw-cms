@@ -33,6 +33,10 @@
     "SourceURL": {
       "type": "string",
       "required": false
+    },
+    "Tags": {
+      "type": "customField",
+      "customField": "plugin::tagsinput.tags"
     }
   }
 }

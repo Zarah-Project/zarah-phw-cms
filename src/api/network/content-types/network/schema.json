@@ -55,6 +55,10 @@
       "relation": "manyToMany",
       "target": "api::person.person",
       "inversedBy": "Networks"
+    },
+    "Tags": {
+      "type": "customField",
+      "customField": "plugin::tagsinput.tags"
     }
   }
 }

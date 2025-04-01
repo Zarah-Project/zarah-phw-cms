@@ -52,6 +52,10 @@
       "relation": "manyToMany",
       "target": "api::person.person",
       "inversedBy": "Essays"
+    },
+    "Tags": {
+      "type": "customField",
+      "customField": "plugin::tagsinput.tags"
     }
   }
 }

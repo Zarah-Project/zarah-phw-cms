@@ -23,12 +23,12 @@
       "inversedBy": "People"
     },
     "Image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "CardText": {
       "type": "string",
@@ -58,6 +58,10 @@
       "relation": "manyToMany",
       "target": "api::network.network",
       "mappedBy": "People"
+    },
+    "Tags": {
+      "type": "customField",
+      "customField": "plugin::tagsinput.tags"
     }
   }
 }

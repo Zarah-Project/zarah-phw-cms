@@ -59,6 +59,10 @@
       "relation": "manyToMany",
       "target": "api::essay.essay",
       "inversedBy": "ActivismStories"
+    },
+    "Tags": {
+      "type": "customField",
+      "customField": "plugin::tagsinput.tags"
     }
   }
 }
