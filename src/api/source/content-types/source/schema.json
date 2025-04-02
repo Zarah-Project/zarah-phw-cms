@@ -37,6 +37,10 @@
     "Tags": {
       "type": "customField",
       "customField": "plugin::tagsinput.tags"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Title"
     }
   }
 }
