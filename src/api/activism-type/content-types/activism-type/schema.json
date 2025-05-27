@@ -23,6 +23,17 @@
       "relation": "oneToMany",
       "target": "api::activism-story.activism-story",
       "mappedBy": "ActivismType"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "TypeWithImage": {
+      "type": "string",
+      "required": true
     }
   }
 }
