@@ -24,6 +24,9 @@
       "relation": "oneToMany",
       "target": "api::person.person",
       "mappedBy": "PersonGroup"
+    },
+    "Sort": {
+      "type": "integer"
     }
   }
 }
