@@ -25,15 +25,19 @@
       "mappedBy": "ActivismType"
     },
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "TypeWithImage": {
       "type": "string",
       "required": true
+    },
+    "Sort": {
+      "type": "integer"
     }
   }
 }
