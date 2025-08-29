@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "network_cities",
+  "info": {
+    "singularName": "network-city",
+    "pluralName": "network-cities",
+    "displayName": "NetworkCity",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "City": {
+      "type": "string",
+      "required": true
+    },
+    "Latitude": {
+      "type": "decimal"
+    },
+    "Longitude": {
+      "type": "decimal"
+    },
+    "Networks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::network.network",
+      "mappedBy": "NetworkCity"
+    }
+  }
+}

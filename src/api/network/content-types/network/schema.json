@@ -15,21 +15,12 @@
     "Title": {
       "type": "string"
     },
-    "Place": {
-      "type": "string"
-    },
     "StartDate": {
       "type": "date",
       "required": true
     },
     "EndDate": {
       "type": "date"
-    },
-    "Latitude": {
-      "type": "float"
-    },
-    "Longitude": {
-      "type": "float"
     },
     "Content": {
       "type": "blocks"
@@ -59,6 +50,12 @@
     "Tags": {
       "type": "customField",
       "customField": "plugin::tagsinput.tags"
+    },
+    "NetworkCity": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::network-city.network-city",
+      "inversedBy": "Networks"
     }
   }
 }
