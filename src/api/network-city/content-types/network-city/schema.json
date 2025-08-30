@@ -16,10 +16,10 @@
       "required": true
     },
     "Latitude": {
-      "type": "decimal"
+      "type": "float"
     },
     "Longitude": {
-      "type": "decimal"
+      "type": "float"
     },
     "Networks": {
       "type": "relation",
