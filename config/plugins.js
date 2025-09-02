@@ -47,9 +47,9 @@ module.exports = () => ({
                 indexName: "labouractivism",
                 transformEntry({ entry }) {
                     const transformedEntry = entry
-                    delete transformedEntry.ActivismStories
-                    delete transformedEntry.Essyas
-                    delete transformedEntry.Networks
+                    // delete transformedEntry.ActivismStories
+                    // delete transformedEntry.Essyas
+                    // delete transformedEntry.Networks
                     return {
                         ...transformedEntry,      
                         type: 'person',
