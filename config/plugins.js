@@ -5,9 +5,6 @@ module.exports = () => ({
                 indexName: "labouractivism",
                 transformEntry({ entry }) {
                     const transformedEntry = entry
-                    delete transformedEntry.Essyas
-                    delete transformedEntry.Networks
-                    delete transformedEntry.People
                     return {
                         ...transformedEntry,      
                         type: 'activismStory',
@@ -19,9 +16,6 @@ module.exports = () => ({
                 indexName: "labouractivism",
                 transformEntry({ entry }) {
                     const transformedEntry = entry
-                    delete transformedEntry.ActivismStories
-                    delete transformedEntry.Networks
-                    delete transformedEntry.People
                     return {
                         ...transformedEntry,      
                         type: 'essay',
@@ -33,9 +27,6 @@ module.exports = () => ({
                 indexName: "labouractivism",
                 transformEntry({ entry }) {
                     const transformedEntry = entry
-                    delete transformedEntry.ActivismStories
-                    delete transformedEntry.Essyas
-                    delete transformedEntry.People
                     return {
                         ...transformedEntry,      
                         type: 'network',
@@ -47,9 +38,6 @@ module.exports = () => ({
                 indexName: "labouractivism",
                 transformEntry({ entry }) {
                     const transformedEntry = entry
-                    delete transformedEntry.ActivismStories
-                    delete transformedEntry.Essyas
-                    delete transformedEntry.Networks
                     return {
                         ...transformedEntry,      
                         type: 'person',
