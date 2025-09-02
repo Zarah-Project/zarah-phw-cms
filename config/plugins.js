@@ -11,7 +11,7 @@ module.exports = () => ({
                     return {
                         ...transformedEntry,      
                         type: 'activismStory',
-                        Tags: transformedEntry.Tags.map(tag => tag.name),
+                        Tags: transformedEntry.Tags ? transformedEntry.Tags.map(tag => tag.name) : [],
                     }
                 },
             }, 
@@ -25,7 +25,7 @@ module.exports = () => ({
                     return {
                         ...transformedEntry,      
                         type: 'essay',
-                        Tags: transformedEntry.Tags.map(tag => tag.name),
+                        Tags: transformedEntry.Tags ? transformedEntry.Tags.map(tag => tag.name) : [],
                     }
                 },
             }, 
@@ -39,7 +39,7 @@ module.exports = () => ({
                     return {
                         ...transformedEntry,      
                         type: 'network',
-                        Tags: transformedEntry.Tags.map(tag => tag.name),
+                        Tags: transformedEntry.Tags ? transformedEntry.Tags.map(tag => tag.name) : [],
                     }
                 },
             },
@@ -47,13 +47,13 @@ module.exports = () => ({
                 indexName: "labouractivism",
                 transformEntry({ entry }) {
                     const transformedEntry = entry
-                    // delete transformedEntry.ActivismStories
-                    // delete transformedEntry.Essyas
-                    // delete transformedEntry.Networks
+                    delete transformedEntry.ActivismStories
+                    delete transformedEntry.Essyas
+                    delete transformedEntry.Networks
                     return {
                         ...transformedEntry,      
                         type: 'person',
-                        Tags: transformedEntry.Tags.map(tag => tag.name),
+                        Tags: transformedEntry.Tags ? transformedEntry.Tags.map(tag => tag.name) : [],
                     }
                 },
             },
