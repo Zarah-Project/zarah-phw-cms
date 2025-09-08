@@ -56,6 +56,12 @@
     "Tags": {
       "type": "customField",
       "customField": "plugin::tagsinput.tags"
+    },
+    "Sources": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::source.source",
+      "mappedBy": "Essays"
     }
   }
 }

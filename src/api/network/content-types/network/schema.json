@@ -56,6 +56,12 @@
       "relation": "manyToOne",
       "target": "api::network-city.network-city",
       "inversedBy": "Networks"
+    },
+    "Sources": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::source.source",
+      "mappedBy": "Networks"
     }
   }
 }
